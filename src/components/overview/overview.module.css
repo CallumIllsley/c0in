@@ -5,20 +5,22 @@
     grid-template-columns: [graphs] 33.3% [content] auto;
     grid-template-areas: "incomeChart incomeView"
                          "outgoingsChart outgoingView";
+    background-color: #F2F7F2;
 }
 
 .incomeChartContainer {
     grid-area: incomeChart;
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, .2);   
+    border: 1px solid rgba(0, 0, 0, .1);   
+
 }
 
 .incomeViewContainer { 
     grid-area: incomeView;
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, .2); 
+    border: 1px solid rgba(0, 0, 0, .1); 
     border-left: 0px;   
 }
 
@@ -27,7 +29,7 @@
     grid-area: outgoingsChart;
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, .2); 
+    border: 1px solid rgba(0, 0, 0, .1); 
     border-top: 0px;  
 }
 
@@ -35,6 +37,14 @@
     grid-area: outgoingsView;
     width: 100%;
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, .2); 
+    border: 1px solid rgba(0, 0, 0, .1); 
     border-left: 0px;   
+}
+
+.tableWrapper {
+    grid-area: incomeView;
+    width: 95%;
+    height: 90%;
+    margin: 2%;
+    overflow-y: scroll;
 }

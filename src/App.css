@@ -1,6 +1,6 @@
 #main-container { 
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: [menu] 13vw [body-left] 29vw [body-center] 29vw [body-right] 29vw;
   grid-template-rows: [top] 50vh [bottom] 50vh;
