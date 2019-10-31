@@ -9,3 +9,14 @@ a live overview.
 ### Libraries used
 > #### Semantic UI React - https://react.semantic-ui.com/usage
 > Semantic UI will be used for the visual design of the application
+>
+> #### React-Redux - https://react-redux.js.org/
+> React redux used for state management across the application
+
+### Helpful snippets
+
+> Setting redux state -         
+> ```<button onClick={ () => dispatch( addIncome({type : "Fuel", name : 'Fueled car', amount : 3, id : 3}))}>TEST ME</button> ```
+>
+> Getting redux state - <br/>
+> ```const income = useSelector(state => state.income)```

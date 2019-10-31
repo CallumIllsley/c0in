@@ -4,7 +4,7 @@
     grid-template-rows: [top] 50% [bottom] 50%;
     grid-template-columns: [graphs] 33.3% [content] auto;
     grid-template-areas: "incomeChart incomeView"
-                         "outgoingsChart outgoingView";
+                         "outgoingsChart outgoingsView";
     background-color: #F2F7F2;
 }
 
@@ -42,9 +42,14 @@
 }
 
 .tableWrapper {
-    grid-area: incomeView;
     width: 95%;
     height: 90%;
     margin: 2%;
     overflow-y: scroll;
+}
+
+.chartWrapper {
+    width: 93%;
+    height: 93%;
+    margin: 3%;
 }
