@@ -2,8 +2,8 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: [menu] 16vw [body-left] 28vw [body-center] 28vw [body-right]28vw;
+  grid-template-columns: [menu] 13vw [body-left] 29vw [body-center] 29vw [body-right] 29vw;
   grid-template-rows: [top] 50vh [bottom] 50vh;
-  grid-area: "menu main1 main2 main3"
-             "menu main4 main5 main6";
+  grid-template-areas: "menu mainContent mainContent mainContent"
+                       "menu mainContent mainContent mainContent";
 }

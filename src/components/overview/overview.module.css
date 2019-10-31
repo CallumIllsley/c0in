@@ -1,0 +1,6 @@
+.overviewContainer { 
+    grid-area: mainContent;
+    display: grid;
+    grid-template-rows: [top] 50% [bottom] 50%;
+    grid-template-columns: [graphs] 33.3% [content] auto;
+}
