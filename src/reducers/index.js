@@ -14,7 +14,7 @@ function rootReducer(state = initialState, action) {
     }
 
     if (action.type === CHANGE_PAGE) {
-        return state.pageLoaded = action.payload
+        return ({...state, pageLoaded : action.payload})
     }
 
     return state

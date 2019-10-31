@@ -10,21 +10,14 @@ import { Icon } from 'semantic-ui-react'
 
 function OverviewIncomeView() {
 
-    const income = useSelector(state => state.income)
-    const dispatch = useDispatch()
-
-    React.useEffect( () => { 
-        console.log(income)
-    } )
-
     return (
         <div className={Styles.incomeViewContainer}>
             <div className={Styles.tableWrapper}>
-                <Table fixed color={"grey"}>
+                <Table fixed color={"green"}>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>Type</Table.HeaderCell>
-                            <Table.HeaderCell>Name</Table.HeaderCell>
+                            <Table.HeaderCell>Description</Table.HeaderCell>
                             <Table.HeaderCell>Amount</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>

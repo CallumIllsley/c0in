@@ -8,11 +8,11 @@ function OverviewOutgoingsView() {
     return (
         <div className={Styles.outgoingsViewContainer}>
             <div className={Styles.tableWrapper}>
-                <Table fixed color={"grey"}>
+                <Table fixed color={"green"}>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell>Type</Table.HeaderCell>
-                            <Table.HeaderCell>Name</Table.HeaderCell>
+                            <Table.HeaderCell>Description</Table.HeaderCell>
                             <Table.HeaderCell>Amount</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
