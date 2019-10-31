@@ -3,4 +3,38 @@
     display: grid;
     grid-template-rows: [top] 50% [bottom] 50%;
     grid-template-columns: [graphs] 33.3% [content] auto;
+    grid-template-areas: "incomeChart incomeView"
+                         "outgoingsChart outgoingView";
+}
+
+.incomeChartContainer {
+    grid-area: incomeChart;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, .2);   
+}
+
+.incomeViewContainer { 
+    grid-area: incomeView;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, .2); 
+    border-left: 0px;   
+}
+
+
+.outgoingsChartContainer {
+    grid-area: outgoingsChart;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, .2); 
+    border-top: 0px;  
+}
+
+.outgoingsViewContainer { 
+    grid-area: outgoingsView;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, .2); 
+    border-left: 0px;   
 }

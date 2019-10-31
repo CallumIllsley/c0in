@@ -7,5 +7,5 @@ a live overview.
 >Git Project link - https://github.com/users/CallumIllsley/projects/1
 
 ### Libraries used
-> #### Semantic UI React
+> #### Semantic UI React - https://react.semantic-ui.com/usage
 > Semantic UI will be used for the visual design of the application
