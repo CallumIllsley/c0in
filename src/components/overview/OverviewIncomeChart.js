@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './overview.module.css'
 
 import { VictoryPie, VictoryContainer } from 'victory'
+import { Header } from 'semantic-ui-react'
 
 function OverviewIncomeChart() {
     const [currentHeight, setCurrentHeight] = React.useState()
@@ -21,6 +22,7 @@ function OverviewIncomeChart() {
 
     return (
         <div className={Styles.incomeChartContainer}>
+            <Header color="green" className={Styles.oHeader}>Income</Header>
             <div ref={ref} className={Styles.chartWrapper}>
                             <VictoryPie data={[{x: "Fuel", y : 35}, {x : "Rent", y : 70}, {x: "Utilities", y : 38}]}
                             colorScale={["tomato", "gold", "orange"]}

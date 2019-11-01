@@ -2,7 +2,7 @@ import {ADD_INCOME} from '../constants/action-types'
 import {CHANGE_PAGE} from '../constants/action-types'
 
 const initialState = {
-    income: [], 
+    income: [{}], 
     pageLoaded: 'overview'
 }
 

@@ -52,3 +52,8 @@
     height: 93%;
     margin: 3%;
 }
+
+.oHeader { 
+    transform: translateX(5%) translateY(100%);
+    z-index: 2;
+}
