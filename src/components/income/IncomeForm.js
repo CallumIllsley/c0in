@@ -1,10 +1,10 @@
 import React from 'react'
 import Styles from './income.module.css'
 
-import { addIncome } from '../../actions/index'
+import { addIncome, generateTable } from '../../actions/index'
 import { useDispatch } from 'react-redux'
 
-import { Form, Dropdown, Header, Input, Button, Message, Segment, StatisticLabel} from 'semantic-ui-react'
+import { Form, Dropdown, Header, Input, Popup, Segment,} from 'semantic-ui-react'
 
 function IncomeForm() {
 
@@ -23,10 +23,11 @@ function IncomeForm() {
         <div className={Styles.incomeFormContainer}>
             <div className={Styles.incomeFormWrapper}>
                 <Header color="green">Income</Header>
-                <Form onSubmit={() => {
-                        dispatch(addIncome({item: dropValue.text, desc: inputValue.desc, amount: inputValue.amount}))
+                <Form className={Styles.form}onSubmit={() => {
+                        dispatch(addIncome({item: dropValue.text, desc: inputValue.desc, amount: inputValue.amount, icon: dropValue.icon}))
                         setInputValue({desc: '', amount: ''})
                         setIscomplete([false, false, false])
+                        dispatch(generateTable(true))
                     }}>
                      <Form.Field>
                         <Dropdown selection text={dropValue.text} icon={dropValue.icon} floating labeled button fluid className='icon'>
@@ -50,14 +51,18 @@ function IncomeForm() {
                     </Form.Field>
                     <Form.Field>
                         <label>Amount</label>
-                        <Input onChange={(e) => {setIscomplete([isComplete[0], isComplete[1], true]);
+                        <>  
+                        <Popup size="mini" content="Must be a number" position="bottom left" trigger={
+                                <Input type='number' onChange={(e) => {setIscomplete([isComplete[0], isComplete[1], true]);
                                                  setInputValue({desc: inputValue.desc, amount : e.target.value}) }}
                                                 value={inputValue.amount} 
                                                 icon="money" 
                                                 iconPosition="left" 
                                                 placeholder="Amount" 
                                                 fluid>
-                                                </Input>
+                                </Input>}>
+                            </Popup>
+                        </>
                     </Form.Field>
                     <Form.Button content="Submit" fluid/>
                     {!isComplete[0] || !isComplete[1] || !isComplete[2] ? <Segment color="red">Enter details to add to list!</Segment> : null}
