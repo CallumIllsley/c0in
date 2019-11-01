@@ -1,7 +1,4 @@
-import { ADD_INCOME, MANAGE_BALANCE } from '../constants/action-types'
-import { CHANGE_PAGE } from '../constants/action-types'
-import { GENERATE_TABLE } from '../constants/action-types'
-import { MANAGE_BALANCE } from '../constants/action-types'
+import { ADD_INCOME, MANAGE_BALANCE, CHANGE_PAGE, GENERATE_TABLE } from '../constants/action-types'
 
 const initialState = {
     income: [], 

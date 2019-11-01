@@ -1,8 +1,8 @@
 import React from 'react'
 import Styles from './income.module.css'
 
-import { addIncome, generateTable } from '../../actions/index'
-import { useDispatch } from 'react-redux'
+import { addIncome, generateTable, manageBalance } from '../../actions/index'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { Form, Dropdown, Header, Input, Popup, Segment,} from 'semantic-ui-react'
 
@@ -13,6 +13,9 @@ function IncomeForm() {
     const [inputValue, setInputValue] = React.useState({desc: null, amount: null,})
 
     const dispatch = useDispatch()
+
+    let balance = useSelector(state => parseInt(state.balance))
+    let newBalance = parseInt(balance) + parseInt(inputValue.amount);
 
     function handleClick(icons, texts) { 
         setDropValue({icon: icons, text: texts})
@@ -25,6 +28,7 @@ function IncomeForm() {
                 <Header color="green">Income</Header>
                 <Form className={Styles.form}onSubmit={() => {
                         dispatch(addIncome({item: dropValue.text, desc: inputValue.desc, amount: inputValue.amount, icon: dropValue.icon}))
+                        dispatch(manageBalance(parseInt(newBalance)))
                         setInputValue({desc: '', amount: ''})
                         setIscomplete([false, false, false])
                         dispatch(generateTable(true))
