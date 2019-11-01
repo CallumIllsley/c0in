@@ -16,63 +16,6 @@ function OverviewOutgoingsView() {
                             <Table.HeaderCell>Amount</Table.HeaderCell>
                         </Table.Row>
                     </Table.Header>
-                    <Table.Body>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                        <Table.Row>
-                            <Table.Cell><Icon name="home" size="large"/></Table.Cell>
-                            <Table.Cell>Sample Data</Table.Cell>
-                            <Table.Cell>£100</Table.Cell>
-                        </Table.Row>
-                    </Table.Body>
                 </Table>
             </div>
         </div>
