@@ -1,7 +1,7 @@
 import React from 'react'
 import Styles from './overview.module.css'
 
-import { VictoryPie, VictoryContainer } from 'victory'
+import { VictoryPie, VictoryTheme } from 'victory'
 import { Header } from 'semantic-ui-react'
 import { useSelector } from 'react-redux'
 
@@ -49,9 +49,10 @@ function OverviewIncomeChart() {
         <div className={Styles.incomeChartContainer}>
             <Header color="green" className={Styles.oHeader}>Income</Header>
             <div ref={ref} className={Styles.chartWrapper}>
-                            <VictoryPie data={sortedGraphData}
-                            colorScale={["tomato", "gold", "orange"]}
+                            <VictoryPie data={sortedGraphData} 
+                            theme={VictoryTheme.material}
                             height={currentHeight}
+                            labelPosition="endAngle"
                 />
             </div>
         </div>

@@ -1,7 +1,8 @@
-import { ADD_INCOME, MANAGE_BALANCE, CHANGE_PAGE, GENERATE_TABLE } from '../constants/action-types'
+import { ADD_INCOME, MANAGE_BALANCE, CHANGE_PAGE, GENERATE_TABLE, ADD_OUTGOINGS, RESET_STATE } from '../constants/action-types'
 
 const initialState = {
     income: [], 
+    outgoings: [],
     pageLoaded: 'overview',
     generateTable: false,
     balance: 0
@@ -24,6 +25,16 @@ function rootReducer(state = initialState, action) {
 
     if (action.type == MANAGE_BALANCE) {
         return ({...state, balance: action.payload})
+    }
+
+    if (action.type === ADD_OUTGOINGS) { 
+        return Object.assign({}, state, {
+            outgoings: state.outgoings.concat(action.payload)
+        })
+    }
+
+    if (action.type === RESET_STATE) { 
+        return initialState
     }
 
     return state

@@ -18,12 +18,15 @@
 
 .btnHover:hover{background-color: #3C6D32 !important;}
 
-.logo { 
-    grid-area: logo;
-    width: 100%;
-    height: 100%;
+.logoWrapper { 
+    grid-area: logo !important;
     background-color: #5EAB4D;
     border: 1px solid  #569C46 !important;
+}
+
+.logo { 
+    width: 100%;
+    height: 100%;
 }
 
 .overview { 

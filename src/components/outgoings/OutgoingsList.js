@@ -1,11 +1,11 @@
 import React from 'react'
-import Styles from './income.module.css'
+import Styles from './outgoings.module.css'
 
 import { Table, Icon } from 'semantic-ui-react'
 import { useSelector } from 'react-redux'
 
-function IncomeList() {
-    let entries = useSelector(state => state.income) 
+function OutgoingsList() {
+    let entries = useSelector(state => state.outgoings) 
     let generate = useSelector(state => state.generateTable) 
 
     function GenerateTableRow() {
@@ -23,7 +23,7 @@ function IncomeList() {
     }
 
     return (
-        <div className={Styles.incomeListWrapper}>
+        <div className={Styles.outgoingsListWrapper}>
             <div className={Styles.tableWrapper}>
                 <Table fixed color="green">
                         <Table.Header>
@@ -41,4 +41,4 @@ function IncomeList() {
     )
 }
 
-export default IncomeList
+export default OutgoingsList

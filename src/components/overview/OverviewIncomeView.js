@@ -1,9 +1,6 @@
 import React from 'react'
 import Styles from './overview.module.css'
 import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
-import { ADD_INCOME } from '../../constants/action-types'
-import { addIncome } from '../../actions/index'
  
 import { Table } from 'semantic-ui-react'
 import { Icon } from 'semantic-ui-react'
@@ -20,6 +17,7 @@ function OverviewIncomeView() {
                     <Table.Cell><Icon name={entry.icon}/>{entry.item}</Table.Cell>
                     <Table.Cell>{entry.desc}</Table.Cell>
                     <Table.Cell>£{entry.amount}</Table.Cell>
+                    <Table.Cell>{entry.date}</Table.Cell>
                  </Table.Row>)}
             )
         )
@@ -34,6 +32,7 @@ function OverviewIncomeView() {
                             <Table.HeaderCell>Type</Table.HeaderCell>
                             <Table.HeaderCell>Description</Table.HeaderCell>
                             <Table.HeaderCell>Amount</Table.HeaderCell>
+                            <Table.HeaderCell>Date</Table.HeaderCell>
                         </Table.Row>
                         {generate ? GenerateTableRow() : null}
                     </Table.Header>

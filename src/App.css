@@ -6,4 +6,5 @@
   grid-template-rows: [top] 50vh [bottom] 50vh;
   grid-template-areas: "menu mainContent mainContent mainContent"
                        "menu mainContent mainContent mainContent";
+  overflow: hidden;
 }
