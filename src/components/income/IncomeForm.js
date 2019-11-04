@@ -28,7 +28,7 @@ function IncomeForm() {
     return (    
         <div className={Styles.incomeFormContainer}>
             <div className={Styles.incomeFormWrapper}>
-                <Header color="green">Income</Header>
+                <Header color="green">Add Income</Header>
                 <Form className={Styles.form}onSubmit={() => {
                         dispatch(addIncome({item: dropValue.text, desc: inputValue.desc, amount: inputValue.amount, icon: dropValue.icon, date: inputValue.date}))
                         dispatch(manageBalance(parseInt(newBalance)))
@@ -43,7 +43,7 @@ function IncomeForm() {
                                 <Dropdown.Divider/>
                                 <Dropdown.Item onClick={() => handleClick('money', 'Income')} icon="money" text="Income"/>
                                 <Dropdown.Item onClick={() => handleClick('trophy', 'Lottery')} icon="trophy" text="Lottery"/>
-                                <Dropdown.Item onClick={() => handleClick('users', 'Friends/Family')} icon="users" text="Friends/Family"/>
+                                <Dropdown.Item onClick={() => handleClick('users', 'Transfer')} icon="users" text="Transfer"/>
                             </Dropdown.Menu>
                         </Dropdown>
                     </Form.Field>

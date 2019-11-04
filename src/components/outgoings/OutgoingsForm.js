@@ -49,7 +49,7 @@ function OutgoingsForm() {
                                 <Dropdown.Item onClick={() => handleClick('shopping cart', 'Shopping')} icon="shopping cart" text="Shopping"/>
                                 <Dropdown.Item onClick={() => handleClick('home', 'Rent')} icon='home' text="Rent"/>
                                 <Dropdown.Item onClick={() => handleClick('trophy', 'Lottery')} icon="trophy" text="Lottery"/>
-                                <Dropdown.Item onClick={() => handleClick('users', 'Friends/Family')} icon="users" text="Friends/Family"/>
+                                <Dropdown.Item onClick={() => handleClick('users', 'Transfers')} icon="users" text="Transfers"/>
                             </Dropdown.Menu>
                         </Dropdown>
                     </Form.Field>

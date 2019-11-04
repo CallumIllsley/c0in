@@ -1,16 +1,17 @@
 import React from 'react'
-import Styles from './overview.module.css'
+import Styles from './income.module.css'
 
-import { Header } from 'semantic-ui-react'
 import { VictoryPie, VictoryTheme } from 'victory'
 import { useSelector } from 'react-redux'
 
+import { Header } from 'semantic-ui-react'
 
-function OverviewOutgoingsChart() {
+function IncomeHistoricChart() {
     const [currentHeight, setCurrentHeight] = React.useState()
     const ref = React.useRef(null) 
+    const dates = useSelector(state => state.incomeHistoricQuery)
 
-    let data = useSelector(state => state.outgoings)
+    let data = useSelector(state => state.incomeHistoricContent)
 
     const graphData = data.map( (entry) => {
         return {
@@ -47,17 +48,17 @@ function OverviewOutgoingsChart() {
     )
 
     return (
-        <div className={Styles.outgoingsChartContainer}>
-            <Header color="green" className={Styles.oHeader}>Outgoings</Header>
+        <div className={Styles.incomeChartContainer}>
+            <Header color="green" className={Styles.oHeader}>{dates[0]} - {dates[1]}</Header>
             <div ref={ref} className={Styles.chartWrapper}>
                             <VictoryPie data={sortedGraphData} 
                             theme={VictoryTheme.material}
-                            labelPosition='endAngle'
                             height={currentHeight}
+                            labelPosition="endAngle"
                 />
             </div>
         </div>
     )
 }
 
-export default OverviewOutgoingsChart
+export default IncomeHistoricChart

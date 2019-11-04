@@ -1,12 +1,15 @@
 import React from 'react'
 import Styles from './outgoings.module.css'
 
-import { Table, Icon } from 'semantic-ui-react'
-import { useSelector } from 'react-redux'
+import { Table, Icon, Button } from 'semantic-ui-react'
+import { useSelector, useDispatch } from 'react-redux'
+import { outgoingsHistoricView } from '../../actions/index'
 
 function OutgoingsList() {
     let entries = useSelector(state => state.outgoings) 
     let generate = useSelector(state => state.generateTable) 
+
+    const dispatch = useDispatch()
 
     function GenerateTableRow() {
         return (
@@ -24,6 +27,7 @@ function OutgoingsList() {
 
     return (
         <div className={Styles.outgoingsListWrapper}>
+            <Button fluid size="tiny" content='View Historic Data' type='button' onClick={() => dispatch(outgoingsHistoricView(true))}/> 
             <div className={Styles.tableWrapper}>
                 <Table fixed color="green">
                         <Table.Header>

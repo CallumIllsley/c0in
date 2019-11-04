@@ -1,12 +1,15 @@
 import React from 'react'
 import Styles from './income.module.css'
 
-import { Table, Icon } from 'semantic-ui-react'
-import { useSelector } from 'react-redux'
+import { Table, Icon, Button } from 'semantic-ui-react'
+import { useSelector, useDispatch } from 'react-redux'
+import { incomeHistoricView } from '../../actions'
 
 function IncomeList() {
     let entries = useSelector(state => state.income) 
     let generate = useSelector(state => state.generateTable) 
+
+    const dispatch = useDispatch()
 
     function GenerateTableRow() {
         return (
@@ -24,6 +27,7 @@ function IncomeList() {
 
     return (
         <div className={Styles.incomeListWrapper}>
+            <Button fluid size="tiny" content='View Historic Data' type='button' onClick={() => dispatch(incomeHistoricView(true))}/> 
             <div className={Styles.tableWrapper}>
                 <Table fixed color="green">
                         <Table.Header>
